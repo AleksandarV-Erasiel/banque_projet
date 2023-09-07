@@ -3,6 +3,7 @@ using namespace std;
 #include "Banque.hpp"
 #include "FileAttente.hpp"
 #include "Sed.hpp"
+#include "Arrivee.hpp"
 
 Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers, double tempsEntreArrivees): Sed(t0) {
     _dureePrevue = dureePrevue;
@@ -10,13 +11,19 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
     _tempsEntreArrivees = tempsEntreArrivees;
     Caissier **caissiersList = new Caissier*[nbCaissiers];
     for (int i=0; i < nbCaissiers; i++) {
-        Caissier *tmpCaissier = new Caissier(this, caissiers[i]);
-        caissiersList[i] = tmpCaissier;
+        Caissier *c = new Caissier(this, caissiers[i]);
+        caissiersList[i] = c;
     }
     _caissiers = caissiersList;
+
+    Arrivee* arrivee = new Arrivee(banque, 4.0);
+    banque->ajouter(*arrivee);
 }
 
 Banque::~Banque() {
+    for (int i = 0; i < _nbCaissiers; i++) {
+        delete _caissiers[i];
+    }
     delete [] _caissiers;
 }
 

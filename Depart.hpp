@@ -7,8 +7,8 @@
 class Depart: public Evenement
 {
 protected:
-    Caissier _caissier;
-    Client _client;
+    Caissier *_caissier;
+    Client *_client;
 public:
     Depart(Banque *sed, double heure, Caissier &caissier, Client &client);
     void traiter();

@@ -5,15 +5,17 @@ using namespace std;
 #include "FileAttente.hpp"
 
 Depart::Depart(Banque *sed, double heure, Caissier &caissier, Client &client) : Evenement(sed, heure) {
+    _caissier = &caissier;
+    _client = &client;
 }
 
 void Depart::traiter() {
     delete &_client;
     Banque* banque = (Banque*) _sed;
     if (banque->fileAttente()->estVide()) {
-        _caissier.attendre();
+        _caissier->attendre();
     } else {
         Client &c = banque->fileAttente()->retirer();
-        _caissier.servir(c);
+        _caissier->servir(c);
     }
 }

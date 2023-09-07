@@ -9,6 +9,7 @@ protected:
     double _heure;
 public:
     Evenement(Sed *sed, double heure);
+    virtual ~Evenement();
     virtual void traiter();
     double heure();
 };

@@ -18,6 +18,7 @@ void Sed::lancer() {
         _heure = t1;
         e1.traiter();
         _evenements.erase(e1);
+        delete &e1;
     }
 }
 

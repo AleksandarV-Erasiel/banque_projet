@@ -12,6 +12,7 @@ protected:
     queue<Client> _clients;
     int _longueurMax;
     double _longueurMoyenne;
+    double _tempsMoyenAttente;
 public:
     FileAttente(Banque *banque);
     int longueurMax();
