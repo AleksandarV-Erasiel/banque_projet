@@ -4,8 +4,6 @@
 #include "Banque.hpp"
 class Arrivee: public Evenement
 {
-protected:
-    
 public:
     Arrivee(Banque *sed, double heure);
     void traiter();

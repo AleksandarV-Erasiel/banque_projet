@@ -11,7 +11,7 @@ protected:
     set<Evenement> _evenements;
 public:
     Sed(double t0);
-    void ajouter(Evenement& event);
+    void ajouter(Evenement& e);
     void lancer();
     double heure();
 };
