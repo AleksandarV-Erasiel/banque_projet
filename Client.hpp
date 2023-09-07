@@ -3,9 +3,9 @@
 class Client
 {
 protected:
-    /* data */
+    double _heureArrivee;
 public:
-    Client(/* args */);
+    Client(double heureArrivee);
     double heureArrivee();
 };
 #endif

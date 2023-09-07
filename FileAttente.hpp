@@ -1,14 +1,19 @@
 #ifndef __FILEATTENTE_H
 #define __FILEATTENTE_H
 #include "Client.hpp"
+#include <queue>
+using namespace std;
 
+class Banque;
 class FileAttente
 {
 protected:
-    /* data */
+    Banque *_banque;
+    queue<Client> _clients;
+    int _longueurMax;
+    double _longueurMoyenne;
 public:
-    FileAttente(/* args */);
-    ~FileAttente();
+    FileAttente(Banque *banque);
     int longueurMax();
     double longueurMoyenne();
     double tempsMoyenAttente();

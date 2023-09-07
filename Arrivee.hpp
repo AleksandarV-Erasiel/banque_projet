@@ -3,9 +3,9 @@
 class Arrivee
 {
 protected:
-    /* data */
+    
 public:
-    Arrivee(/* args */);
+    Arrivee(double heure);
     void traiter();
 };
 #endif

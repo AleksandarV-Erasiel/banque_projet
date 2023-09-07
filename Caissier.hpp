@@ -2,12 +2,17 @@
 #define __CAISSIER_H
 #include "Client.hpp"
 
+class Banque;
 class Caissier
 {
 protected:
-    /* data */
+    Banque *_banque;
+    double _tempsMoyenService;
+    int _nbClients;
+    double _tempsServiceTotal;
+    bool _estLibre;
 public:
-    Caissier(/* args */);
+    Caissier(Banque *banque, double tempsMoyenService);
     double tempsMoyenService();
     int nbClients();
     double tauxOccupation();
