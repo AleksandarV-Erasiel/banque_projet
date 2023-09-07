@@ -7,7 +7,7 @@ Sed::Sed(double t0) {
     _heure = t0;
 }
 
-void Sed::ajouter(Evenement evenement) {
+void Sed::ajouter(Evenement &evenement) {
     _evenements.insert(evenement);
 }
 
