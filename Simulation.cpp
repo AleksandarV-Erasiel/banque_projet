@@ -3,6 +3,7 @@ using namespace std;
 #include "Banque.hpp"
 
 int main() {
+    cout << "Simulation lancee" << endl;
     double *caissiers = new double[3];
     caissiers[0] = 3.0;
     caissiers[1] = 4.0;

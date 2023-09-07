@@ -6,6 +6,15 @@ using namespace std;
 #include "Arrivee.hpp"
 
 Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers, double tempsEntreArrivees): Sed(t0) {
+    cout << "PARAMETRES D'ENTREES " << endl;
+    cout << "Duree prevue: " << dureePrevue << endl;
+    cout << "Nombre de Caissiers: " << nbCaissiers << endl;
+    cout << "Duree de traitement des Caissiers: [ ";
+    for (int i = 0; i < nbCaissiers; ++i) {
+        cout << caissiers[i] << " ";
+    }
+    cout << "]" << endl;
+    cout << "Temps entre arrivees: " << tempsEntreArrivees << endl;
     _dureePrevue = dureePrevue;
     _nbCaissiers = nbCaissiers;
     _tempsEntreArrivees = tempsEntreArrivees;
@@ -16,8 +25,8 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
     }
     _caissiers = caissiersList;
 
-    Arrivee* arrivee = new Arrivee(banque, 4.0);
-    banque->ajouter(*arrivee);
+    Arrivee* arrivee = new Arrivee(this, 4.0);
+    this->ajouter(*arrivee);
 }
 
 Banque::~Banque() {
