@@ -17,8 +17,8 @@ public:
     int longueurMax();
     double longueurMoyenne();
     double tempsMoyenAttente();
-    void ajouter(Client client);
+    void ajouter(Client& client);
     bool estVide();
-    Client retirer();
+    Client& retirer();
 };
 #endif

@@ -17,7 +17,7 @@ public:
     int nbClients();
     double tauxOccupation();
     bool estLibre();
-    void servir(Client client);
+    void servir(Client &client);
     void attendre();
 };
 #endif

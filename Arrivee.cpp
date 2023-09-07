@@ -10,7 +10,7 @@ Arrivee::Arrivee(Banque *sed, double heure): Evenement(sed, heure) {
 }
 
 void Arrivee::traiter() {
-    Banque* banque = ((Banque*) _sed);
+    Banque* banque = (Banque*) _sed;
     Client *c = new Client(_heure);
     Caissier *cs = banque->unCaissierLibre();
     if (cs) {
