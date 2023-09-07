@@ -12,7 +12,7 @@ protected:
     Caissier **_caissiers;
     int _nbCaissiers;
 public:
-    Banque(double dureePrevue, double *caissiers, double tempsEntreArrivees);
+    Banque(double t0, double dureePrevue, double *caissiers, double tempsEntreArrivees);
     ~Banque();
     double dureePrevue();
     int nbCaissiers();
