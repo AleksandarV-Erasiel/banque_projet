@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "Banque.hpp"
+#include "FileAttente.hpp"
 #include "Sed.hpp"
 
 Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers, double tempsEntreArrivees): Sed(t0) {
@@ -54,6 +55,6 @@ Caissier *Banque::unCaissierLibre() {
     return caissierLibre;
 }
 
-FileAttente *fileAttente() {
+FileAttente *Banque::fileAttente() {
     return _fileAttente;
 }
