@@ -15,9 +15,13 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
     }
     cout << "]" << endl;
     cout << "Temps entre arrivees: " << tempsEntreArrivees << endl;
+
     _dureePrevue = dureePrevue;
     _nbCaissiers = nbCaissiers;
     _tempsEntreArrivees = tempsEntreArrivees;
+
+    _fileAttente = new FileAttente(this);
+
     Caissier **caissiersList = new Caissier*[nbCaissiers];
     for (int i=0; i < nbCaissiers; i++) {
         Caissier *c = new Caissier(this, caissiers[i]);
@@ -26,7 +30,7 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
     _caissiers = caissiersList;
 
     Arrivee* arrivee = new Arrivee(this, 4.0);
-    this->ajouter(*arrivee);
+    ajouter(*arrivee);
 }
 
 Banque::~Banque() {
