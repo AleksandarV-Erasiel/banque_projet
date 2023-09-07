@@ -1,6 +1,7 @@
 #ifndef __ARRIVEE_H
 #define __ARRIVEE_H
-class Arrivee
+#include "Evenement.hpp"
+class Arrivee: public Evenement
 {
 protected:
     

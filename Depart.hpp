@@ -2,7 +2,8 @@
 #define __DEPART_H
 #include "Caissier.hpp"
 #include "Client.hpp"
-class Depart
+#include "Evenement.hpp"
+class Depart: public Evenement
 {
 protected:
     Caissier _caissier;

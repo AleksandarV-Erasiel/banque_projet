@@ -1,9 +1,10 @@
 #ifndef __BANQUE_H
 #define __BANQUE_H
 #include "Caissier.hpp"
+#include "Sed.hpp"
 
 class FileAttente;
-class Banque
+class Banque:public Sed
 {
 protected:
     FileAttente *_fileAttente;
