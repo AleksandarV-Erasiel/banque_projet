@@ -6,7 +6,7 @@ class Arrivee: public Evenement
 protected:
     
 public:
-    Arrivee(double heure);
+    Arrivee(Sed *sed, double heure);
     void traiter();
 };
 #endif

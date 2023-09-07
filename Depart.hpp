@@ -9,7 +9,7 @@ protected:
     Caissier _caissier;
     Client _client;
 public:
-    Depart(double heure, Caissier caissier, Client client);
+    Depart(Sed *sed, double heure, Caissier caissier, Client client);
     void traiter();
 };
 #endif

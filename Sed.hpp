@@ -7,11 +7,10 @@ using namespace std;
 class Sed
 {
 protected:
-    double _t0;
+    double _heure;
     set<Evenement> _evenements;
 public:
     Sed(double t0);
-    ~Sed();
     void ajouter(Evenement event);
     void lancer();
     double heure();
