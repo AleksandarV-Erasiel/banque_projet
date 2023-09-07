@@ -6,19 +6,19 @@ using namespace std;
 #include "Caissier.hpp"
 #include "FileAttente.hpp"
 
-Arrivee::Arrivee(Sed *sed, double heure): Evenement(sed, heure) {
-
+Arrivee::Arrivee(Banque *sed, double heure): Evenement(sed, heure) {
 }
 
 void Arrivee::traiter() {
+    Banque* banque = ((Banque*) _sed);
     Client *c = new Client(_heure);
-    Caissier *cs = _sed.unCaissierLibre();
+    Caissier *cs = banque->unCaissierLibre();
     if (cs) {
-        cs->servir(c);
-    } else { _sed.fileAttente().ajouter(c); }
+        cs->servir(*c);
+    } else { banque->fileAttente()->ajouter(*c); }
     double hpa = _heure + (rand() % (4 - 2 + 1)) + 2; // TODO: faire en sorte de faire une distribution normal with th standard deviation
-    if (hpa <= _sed.dureePrevue()) { 
-        Arrivee *a = new Arrivee(_sed, hpa);
-        _sed->ajouter(a);
+    if (hpa <= banque->dureePrevue()) {
+        Arrivee *a = new Arrivee(banque, hpa);
+        banque->ajouter(*a);
     }
 }
