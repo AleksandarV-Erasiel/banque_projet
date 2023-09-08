@@ -8,7 +8,7 @@ class Sed
 {
 protected:
     double _heure;
-    set<Evenement> _evenements;
+    set<Evenement*> _evenements;
 public:
     Sed(double t0);
     void ajouter(Evenement& e);

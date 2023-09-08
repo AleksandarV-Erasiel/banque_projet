@@ -10,7 +10,7 @@ Depart::Depart(Banque *sed, double heure, Caissier &caissier, Client &client) : 
 }
 
 void Depart::traiter() {
-    delete &_client;
+    delete _client;
     Banque* banque = (Banque*) _sed;
     if (banque->fileAttente()->estVide()) {
         _caissier->attendre();

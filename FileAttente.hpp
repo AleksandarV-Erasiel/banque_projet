@@ -1,6 +1,7 @@
 #ifndef __FILEATTENTE_H
 #define __FILEATTENTE_H
 #include "Client.hpp"
+#include "Banque.hpp"
 #include <queue>
 using namespace std;
 

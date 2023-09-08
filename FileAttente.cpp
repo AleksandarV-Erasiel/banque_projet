@@ -1,5 +1,4 @@
 #include "FileAttente.hpp"
-#include "Banque.hpp"
 
 FileAttente::FileAttente(Banque *banque) {
     _banque = banque;

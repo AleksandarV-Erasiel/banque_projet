@@ -17,6 +17,7 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
     cout << "Temps entre arrivees: " << tempsEntreArrivees << endl;
 
     _dureePrevue = dureePrevue;
+    _dureeReelle = dureePrevue;
     _nbCaissiers = nbCaissiers;
     _tempsEntreArrivees = tempsEntreArrivees;
 
@@ -74,6 +75,18 @@ Caissier *Banque::unCaissierLibre() {
     }
     return caissierLibre;
 }
+
+double** Banque::tauxOccupationParCaissier() {
+    int nbCaissiers = _nbCaissiers;
+    double** tauxOccupation = new double*[nbCaissiers];
+
+    for (int i = 0; i < nbCaissiers; ++i) {
+        tauxOccupation[i] = new double;
+        *(tauxOccupation[i]) = _caissiers[i]->tauxOccupation();
+    }
+    return tauxOccupation;
+}
+
 
 FileAttente *Banque::fileAttente() {
     return _fileAttente;

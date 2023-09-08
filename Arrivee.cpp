@@ -28,8 +28,8 @@ void Arrivee::traiter() {
     normal_distribution<double> distribution(banque->tempsEntreArrivees(), ecartType);
     double hpa = distribution(generator);
 
-    if (hpa <= banque->dureePrevue()) {
-        Arrivee *a = new Arrivee(banque, hpa);
+    if (banque->heure() + hpa <= banque->dureePrevue()) {
+        Arrivee *a = new Arrivee(banque, banque->heure() + hpa);
         banque->ajouter(*a);
     }
 }
