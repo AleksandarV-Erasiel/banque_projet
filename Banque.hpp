@@ -2,6 +2,7 @@
 #define __BANQUE_H
 #include "Caissier.hpp"
 #include "Sed.hpp"
+#include "FileAttente.hpp"
 
 class FileAttente;
 class Banque:public Sed
@@ -21,5 +22,6 @@ public:
     int nbClients();
     Caissier *unCaissierLibre();
     FileAttente *fileAttente();
+    double** tauxOccupationParCaissier();
 };
 #endif
