@@ -17,6 +17,7 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
     cout << "Temps entre arrivees: " << tempsEntreArrivees << endl;
 
     _dureePrevue = dureePrevue;
+    _dureeReelle = dureePrevue;
     _nbCaissiers = nbCaissiers;
     _tempsEntreArrivees = tempsEntreArrivees;
 

@@ -8,17 +8,17 @@ Sed::Sed(double t0) {
 }
 
 void Sed::ajouter(Evenement &e) {
-    _evenements.insert(e);
+    _evenements.insert(&e);
 }
 
 void Sed::lancer() {
     while (!_evenements.empty()) {
-        Evenement e1 = *_evenements.begin();
-        double t1 = e1.heure();
+        Evenement* e1 = *_evenements.begin();
+        double t1 = (*e1).heure();
         _heure = t1;
-        e1.traiter();
+        e1->traiter();
         _evenements.erase(e1);
-        delete &e1;
+        delete e1;
     }
 }
 
