@@ -11,6 +11,8 @@ protected:
     int _nbClients;
     double _tempsServiceTotal;
     bool _estLibre;
+    
+    double _dureeOccupee;
 public:
     Caissier(Banque *banque, double tempsMoyenService);
     double tempsMoyenService();
@@ -19,5 +21,7 @@ public:
     bool estLibre();
     void servir(Client &client);
     void attendre();
+    
+    double dureeOccupee();
 };
 #endif

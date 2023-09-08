@@ -28,6 +28,7 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
         Caissier *c = new Caissier(this, caissiers[i]);
         caissiersList[i] = c;
     }
+    
     _caissiers = caissiersList;
 
     Arrivee* arrivee = new Arrivee(this, 4.0);
@@ -67,11 +68,16 @@ int Banque::nbClients() {
 
 Caissier *Banque::unCaissierLibre() {
     Caissier *caissierLibre = NULL;
-    int i = 0;
-    while (!caissierLibre) {
-        if (_caissiers[i]->estLibre())
-            caissierLibre = _caissiers[i];
-        i++;
+    // int i = 0;
+    // while (!caissierLibre) {
+    //     if (_caissiers[i]->estLibre())
+    //         caissierLibre = _caissiers[i];
+    //     i++;
+    // }
+
+    for (int i = 0; i < _nbCaissiers; i++) {
+        if (_heure >= _caissiers[i]->dureeOccupee() && _caissiers[i]->estLibre()) caissierLibre = _caissiers[i];
+        cout << "_heure >= _caissiers[i]->dureeOccupee() : " << _heure << " >= " << _caissiers[i]->dureeOccupee() << endl;
     }
     return caissierLibre;
 }
@@ -85,6 +91,15 @@ double** Banque::tauxOccupationParCaissier() {
         *(tauxOccupation[i]) = _caissiers[i]->tauxOccupation();
     }
     return tauxOccupation;
+}
+
+double Banque::dureeReelleCalculation() {
+    for (int i = 0; i < _nbCaissiers; ++i) {
+        if (_caissiers[i]->dureeOccupee() > _dureeReelle) {
+            _dureeReelle = _caissiers[i]->dureeOccupee();
+        }
+    }
+    return _dureeReelle;
 }
 
 

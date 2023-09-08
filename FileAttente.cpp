@@ -1,4 +1,5 @@
 #include "FileAttente.hpp"
+#include "Client.hpp"
 
 FileAttente::FileAttente(Banque *banque) {
     _banque = banque;
@@ -19,6 +20,7 @@ double FileAttente::tempsMoyenAttente() {
 }
 
 void FileAttente::ajouter(Client &client) {
+    Client c(18);
     _clients.push(client);
 }
 

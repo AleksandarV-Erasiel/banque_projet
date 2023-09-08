@@ -15,7 +15,7 @@ void Arrivee::traiter() {
     Client *c = new Client(_heure);
     Caissier *cs = banque->unCaissierLibre();
 
-    if (cs)
+    if (cs && banque->heure() >= cs->dureeOccupee())
         cs->servir(*c);
     else
         banque->fileAttente()->ajouter(*c);
