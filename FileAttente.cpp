@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 #include "FileAttente.hpp"
 #include "Client.hpp"
 
@@ -43,4 +45,16 @@ Client &FileAttente::retirer() {
     }
     _clients.pop();
     return c;
+}
+
+// void FileAttente::afficherFile() {
+// 	while (!_clients.empty()){
+// 		cout<<" "<< _clients.front();
+// 		_clients.pop();
+// 	}
+// 	cout<<endl;
+// }
+
+queue<Client> FileAttente::clientsQueue() {
+    return _clients;
 }

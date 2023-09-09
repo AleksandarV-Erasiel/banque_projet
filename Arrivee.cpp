@@ -15,10 +15,18 @@ void Arrivee::traiter() {
     Client *c = new Client(_heure);
     Caissier *cs = banque->unCaissierLibre();
 
-    if (cs && banque->heure() >= cs->dureeOccupee())
-        cs->servir(*c);
-    else
+
+
+    if (cs != NULL) {
+        if (banque->heure() >= cs->dureeOccupee()) cs->servir(*c);
+    } else {
         banque->fileAttente()->ajouter(*c);
+    }
+
+    cout << "banque->fileAttente->estVide() "<< banque->fileAttente()->estVide() << endl;
+    // cout << "banque->fileAttente->clientQueue() " << banque->fileAttente()->clientsQueue().front() << endl;
+
+    // banque->fileAttente()->afficherFile();
 
     // double hpa = _heure + (rand() % (4 - 2 + 1)) + 2;
     double ecartTypePercentage = 10;
