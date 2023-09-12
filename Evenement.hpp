@@ -12,8 +12,8 @@ public:
     virtual ~Evenement();
     virtual void traiter();
     double heure() const;
-    bool operator<(const Evenement& e) const {
-        return _heure < e._heure;
-    }
+    // bool operator<(const Evenement& e) const {
+    //     return _heure < e->heure();
+    // }
 };
 #endif

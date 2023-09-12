@@ -2,6 +2,7 @@
 #define __SED_H
 #include "Evenement.hpp"
 #include <set>
+#include <vector>
 using namespace std;
 
 // bool compareEvenements(Evenement* lhs, Evenement* rhs) {
@@ -12,7 +13,7 @@ class Sed
 {
 protected:
     double _heure;
-    set<Evenement*> _evenements;
+    std::vector<Evenement*> _evenements;
 public:
     Sed(double t0);
     void ajouter(Evenement& e);

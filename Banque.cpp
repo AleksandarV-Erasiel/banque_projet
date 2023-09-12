@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 using namespace std;
 #include "Banque.hpp"
@@ -33,6 +34,21 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
 
     Arrivee* arrivee = new Arrivee(this, 4.0);
     ajouter(*arrivee);
+    Arrivee* arrivee1 = new Arrivee(this, 6.0);
+    ajouter(*arrivee1);
+    Arrivee* arrivee2 = new Arrivee(this, 2.0);
+    ajouter(*arrivee2);
+    Arrivee* arrivee3 = new Arrivee(this, 8.0);
+    ajouter(*arrivee3);
+
+    std::sort(_evenements.begin(), _evenements.end(), [](const Evenement* a, const Evenement* b) {
+        return a->heure() < b->heure();
+    });
+
+    for (const Evenement* evenement : _evenements) {
+        cout << evenement->heure() << " ";
+    }
+    cout << endl;
 }
 
 Banque::~Banque() {

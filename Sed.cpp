@@ -8,7 +8,8 @@ Sed::Sed(double t0) {
 }
 
 void Sed::ajouter(Evenement &e) {
-    _evenements.insert(&e);
+    _evenements.push_back(&e);
+    // _evenements.insert(&e);
 }
 
 void Sed::lancer() {
@@ -25,7 +26,7 @@ void Sed::lancer() {
         double t1 = e1->heure();
         _heure = t1;
         e1->traiter();
-        _evenements.erase(e1);
+        _evenements.erase(_evenements.begin());
         delete e1;
     }
 }
