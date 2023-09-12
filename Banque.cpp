@@ -41,7 +41,7 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
     Arrivee* arrivee3 = new Arrivee(this, 8.0);
     ajouter(*arrivee3);
 
-    std::sort(_evenements.begin(), _evenements.end(), [](const Evenement* a, const Evenement* b) {
+    sort(_evenements.begin(), _evenements.end(), [](const Evenement* a, const Evenement* b) {
         return a->heure() < b->heure();
     });
 

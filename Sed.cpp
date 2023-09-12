@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 using namespace std;
 #include "Sed.hpp"
@@ -15,6 +16,10 @@ void Sed::ajouter(Evenement &e) {
 void Sed::lancer() {
     while (!_evenements.empty()) {
         cout << "!_evenements.empty() : " << !_evenements.empty() << endl;
+
+        sort(_evenements.begin(), _evenements.end(), [](const Evenement* a, const Evenement* b) {
+            return a->heure() < b->heure();
+        });
 
         cout << "Order:" << endl;
 
