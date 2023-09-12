@@ -82,7 +82,7 @@ Caissier *Banque::unCaissierLibre() {
             break;
         }
     }
-    if (caissierLibre) cout << "Numero du caissier trouve: " << i << endl;
+    if (caissierLibre) cout << "Trouver: " << i << endl;
     else cout << "Pas trouver" << endl;
     return caissierLibre;
 }

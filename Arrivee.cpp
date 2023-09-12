@@ -17,7 +17,7 @@ void Arrivee::traiter() {
 
 
 
-    if (cs != NULL) {
+    if (cs != NULL && banque->fileAttente()->estVide()) {
         if (banque->heure() >= cs->dureeOccupee()) cs->servir(*c);
     } else {
         banque->fileAttente()->ajouter(*c);
@@ -36,6 +36,7 @@ void Arrivee::traiter() {
     normal_distribution<double> distribution(banque->tempsEntreArrivees(), ecartType);
     double hpa = distribution(generator);
 
+    cout << "banque->heure() + hpa <= banque->dureePrevue() " << banque->heure() + hpa << " <= " << banque->dureePrevue() << endl;
     if (banque->heure() + hpa <= banque->dureePrevue()) {
         Arrivee *a = new Arrivee(banque, banque->heure() + hpa);
         banque->ajouter(*a);

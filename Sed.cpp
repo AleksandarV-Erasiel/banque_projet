@@ -13,8 +13,16 @@ void Sed::ajouter(Evenement &e) {
 
 void Sed::lancer() {
     while (!_evenements.empty()) {
+        cout << "!_evenements.empty() : " << !_evenements.empty() << endl;
+
+        cout << "Order:" << endl;
+
+        for (const Evenement* evenement : _evenements) {
+            cout << evenement->heure() << " ";
+        }
+        cout << endl;
         Evenement* e1 = *_evenements.begin();
-        double t1 = (*e1).heure();
+        double t1 = e1->heure();
         _heure = t1;
         e1->traiter();
         _evenements.erase(e1);

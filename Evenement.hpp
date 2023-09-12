@@ -11,7 +11,9 @@ public:
     Evenement(Sed *sed, double heure);
     virtual ~Evenement();
     virtual void traiter();
-    double heure();
-    bool operator<(const Evenement& e) const;
+    double heure() const;
+    bool operator<(const Evenement& e) const {
+        return _heure < e._heure;
+    }
 };
 #endif
