@@ -10,7 +10,7 @@ int main() {
     caissiers[0] = 7.0;
     caissiers[1] = 10.0;
     caissiers[2] = 13.0;
-    Banque *banque = new Banque(0, 100.0, nbCaissiers, caissiers , 2.5);
+    Banque *banque = new Banque(0, 20.0, nbCaissiers, caissiers , 5);
     banque->lancer();
     //afficher resultats
     cout << "Duree reelle: " << banque->dureeReelleCalculation() << endl;
