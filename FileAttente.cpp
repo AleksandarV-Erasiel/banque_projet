@@ -47,14 +47,15 @@ Client &FileAttente::retirer() {
 }
 
 void FileAttente::afficherListeClients() {
-    cout << "Liste des clients dans la file d'attente :" << endl;
+    cout << "File Attente :" << endl;
     queue<Client> tempQueue = _clients;
 
     while (!tempQueue.empty()) {
         const Client& client = tempQueue.front();
-        cout << client.heureArrivee() << endl;
+        cout << client.heureArrivee() << " ";
         tempQueue.pop();
     }
+    cout << endl;
 }
 
 queue<Client> FileAttente::clientsQueue() {

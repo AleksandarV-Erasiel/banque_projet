@@ -92,14 +92,14 @@ Caissier *Banque::unCaissierLibre() {
     // }
     int i = 0;
     for (i = 0; i < _nbCaissiers; i++) {
-        cout << "_heure >= _caissiers["<<i<<"]->dureeOccupee() : " << _heure << " >= " << _caissiers[i]->dureeOccupee() << endl;
+        cout << "Temps de traitement restant pour C" << i << ": " << _caissiers[i]->dureeOccupee() - _heure << endl;
         if (_heure >= _caissiers[i]->dureeOccupee() && _caissiers[i]->estLibre()) {
             caissierLibre = _caissiers[i];
             break;
         }
     }
-    if (caissierLibre) cout << "Caissier libre trouve: " << i << endl;
-    else cout << "Pas de caissier libre" << endl;
+    if (caissierLibre) cout << "Caissier libre trouve: " << i << endl << endl;
+    else cout << "Pas de caissier libre" << endl << endl;
 
     return caissierLibre;
 }

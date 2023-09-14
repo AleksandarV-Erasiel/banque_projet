@@ -19,13 +19,14 @@ void Arrivee::traiter() {
 
     if (cs != NULL && banque->fileAttente()->estVide() && banque->heure() >= cs->dureeOccupee()) {
         cs->servir(*c);
-        cout << "Client servi" << endl;
+        cout << "Client servi immediatement servi" << endl;
     } else {
         cout << "banque->heure() " << banque->heure() << endl;
         banque->fileAttente()->afficherListeClients();
         banque->fileAttente()->ajouter(*c);
         cout << "banque->heure() " << banque->heure() << endl;
         cout << "Client ajoute a la file d'attente" << endl;
+        banque->fileAttente()->afficherListeClients();
     }
 
     cout << "banque->heure() " << banque->heure() << endl;
@@ -48,4 +49,5 @@ void Arrivee::traiter() {
         Arrivee *a = new Arrivee(banque, banque->heure() + hpa);
         banque->ajouter(*a);
     }
+    banque->fileAttente()->afficherListeClients();
 }
