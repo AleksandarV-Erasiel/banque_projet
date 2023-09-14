@@ -15,26 +15,30 @@ void Arrivee::traiter() {
     Client *c = new Client(_heure);
     Caissier *cs = banque->unCaissierLibre();
 
+    cout << "banque->heure() " << banque->heure() << endl;
+
 
 
     if (cs != NULL && banque->fileAttente()->estVide()) {
         if (banque->heure() >= cs->dureeOccupee()) cs->servir(*c);
+        cout << "Client servi" << endl;
     } else {
         banque->fileAttente()->ajouter(*c);
+        cout << "Client ajoute a la file d'attente" << endl;
     }
 
     cout << "banque->fileAttente->estVide() "<< banque->fileAttente()->estVide() << endl;
-    // cout << "banque->fileAttente->clientQueue() " << banque->fileAttente()->clientsQueue().front() << endl;
 
-    // banque->fileAttente()->afficherFile();
-
-    // double hpa = _heure + (rand() % (4 - 2 + 1)) + 2;
-    double ecartTypePercentage = 10;
+    double ecartTypePercentage = 1;
     double ecartType = (banque->tempsEntreArrivees()/100) * ecartTypePercentage;
     random_device rd;
     mt19937 generator(rd());
     normal_distribution<double> distribution(banque->tempsEntreArrivees(), ecartType);
     double hpa = distribution(generator);
+
+    cout << "banque->heure() " << banque->heure() << endl;
+    cout << "hpa " << hpa << endl;
+    cout << "banque->dureePrevue() " << banque->dureePrevue() << endl;
 
     cout << "banque->heure() + hpa <= banque->dureePrevue() " << banque->heure() + hpa << " <= " << banque->dureePrevue() << endl;
     if (banque->heure() + hpa <= banque->dureePrevue()) {
