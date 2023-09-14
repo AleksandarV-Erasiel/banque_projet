@@ -34,13 +34,13 @@ void Sed::lancer() {
                 cout << "(D) ";
             }
         }
-        cout << endl;
+        cout << endl << endl;
 
-        cout << endl;
         Evenement* e1 = *_evenements.begin();
         double t1 = e1->heure();
         _heure = t1;
         e1->traiter();
+        // TODO: maybe seg fault from here ? :thinking:
         _evenements.erase(_evenements.begin());
         delete e1;
 

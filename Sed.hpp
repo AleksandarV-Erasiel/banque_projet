@@ -13,7 +13,7 @@ class Sed
 {
 protected:
     double _heure;
-    std::vector<Evenement*> _evenements;
+    vector<Evenement*> _evenements;
 public:
     Sed(double t0);
     void ajouter(Evenement& e);
