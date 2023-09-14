@@ -17,14 +17,13 @@ void Sed::ajouter(Evenement &e) {
 
 void Sed::lancer() {
     while (!_evenements.empty()) {
-        cout << "_evenements.empty() : " << _evenements.empty() << endl;
-
+        // TODO: remove all of these Arrivee, Depart,... etc when debug is finished
         sort(_evenements.begin(), _evenements.end(), [](const Evenement* a, const Evenement* b) {
             return a->heure() < b->heure();
         });
 
-        cout << "Order:" << endl;
 
+        cout << "Ordre d'arrivee:" << endl;
         for (const Evenement* evenement : _evenements) {
             cout << evenement->heure() << " ";
             
@@ -44,10 +43,15 @@ void Sed::lancer() {
         Evenement* e1 = *_evenements.begin();
         double t1 = e1->heure();
         _heure = t1;
-        cout << "t1 = " << t1 << endl; 
+        cout << "_heure = " << _heure << endl; 
         e1->traiter();
+        cout << "test" << endl;
         _evenements.erase(_evenements.begin());
+        cout << "test" << endl;
         delete e1;
+        cout << "test" << endl;
+
+        cout << endl << "======================================" << endl;
     }
 }
 

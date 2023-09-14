@@ -22,7 +22,6 @@ double FileAttente::tempsMoyenAttente() {
 }
 
 void FileAttente::ajouter(Client &client) {
-    Client c(18);
     _clients.push(client);
 }
 
@@ -47,13 +46,16 @@ Client &FileAttente::retirer() {
     return c;
 }
 
-// void FileAttente::afficherFile() {
-// 	while (!_clients.empty()){
-// 		cout<<" "<< _clients.front();
-// 		_clients.pop();
-// 	}
-// 	cout<<endl;
-// }
+void FileAttente::afficherListeClients() {
+    cout << "Liste des clients dans la file d'attente :" << endl;
+    queue<Client> tempQueue = _clients;
+
+    while (!tempQueue.empty()) {
+        const Client& client = tempQueue.front();
+        cout << client.heureArrivee() << endl;
+        tempQueue.pop();
+    }
+}
 
 queue<Client> FileAttente::clientsQueue() {
     return _clients;

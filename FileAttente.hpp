@@ -25,5 +25,6 @@ public:
     // TODO: added for debugging to remove
     // void afficherFile();
     queue<Client> clientsQueue();
+    void afficherListeClients();
 };
 #endif

@@ -8,13 +8,6 @@ protected:
     double _heureArrivee;
 public:
     Client(double heureArrivee);
-    double heureArrivee();
-    // friend ostream& operator<<(std::ostream& os, const Client& client);
+    double heureArrivee() const;
 };
-
-// ostream& operator<<(std::ostream& os, const Client& client)
-// {
-//     os << "Heure d'arrivee: " << client._heureArrivee;
-//     return os;
-// }
 #endif

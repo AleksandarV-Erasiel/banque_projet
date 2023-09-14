@@ -17,15 +17,18 @@ void Arrivee::traiter() {
 
     cout << "banque->heure() " << banque->heure() << endl;
 
-
-
-    if (cs != NULL && banque->fileAttente()->estVide()) {
-        if (banque->heure() >= cs->dureeOccupee()) cs->servir(*c);
+    if (cs != NULL && banque->fileAttente()->estVide() && banque->heure() >= cs->dureeOccupee()) {
+        cs->servir(*c);
         cout << "Client servi" << endl;
     } else {
+        cout << "banque->heure() " << banque->heure() << endl;
+        banque->fileAttente()->afficherListeClients();
         banque->fileAttente()->ajouter(*c);
+        cout << "banque->heure() " << banque->heure() << endl;
         cout << "Client ajoute a la file d'attente" << endl;
     }
+
+    cout << "banque->heure() " << banque->heure() << endl;
 
     cout << "banque->fileAttente->estVide() "<< banque->fileAttente()->estVide() << endl;
 
