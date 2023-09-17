@@ -11,9 +11,7 @@ Depart::Depart(Banque *sed, double heure, Caissier &caissier, Client &client) : 
 
 void Depart::traiter() {
     Banque* banque = (Banque*) _sed;
-    cout << "test1" << endl;
     cout << _client->heureArrivee() << endl;
-    cout << "test2" << endl;
     if (banque->fileAttente()->estVide()) {
         cout << "File Attente vide - Caissier Attendre" << endl;
         _caissier->attendre();

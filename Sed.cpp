@@ -47,5 +47,6 @@ void Sed::lancer() {
 }
 
 double Sed::heure() {
-    return (*_evenements.begin())->heure();
+    return _heure;
+    // return (*_evenements.begin())->heure();
 }

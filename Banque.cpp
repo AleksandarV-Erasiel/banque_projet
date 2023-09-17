@@ -32,7 +32,7 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
     
     _caissiers = caissiersList;
 
-    Arrivee* arrivee = new Arrivee(this, 4.0);
+    Arrivee* arrivee = new Arrivee(this, 0.0);
     ajouter(*arrivee);
 
     for (const Evenement* evenement : _evenements) {
