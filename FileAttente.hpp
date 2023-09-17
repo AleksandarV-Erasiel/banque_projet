@@ -22,8 +22,6 @@ public:
     void ajouter(Client& client);
     bool estVide();
     Client& retirer();
-    // TODO: added for debugging to remove
-    // void afficherFile();
     queue<Client> clientsQueue();
     void afficherListeClients();
 };

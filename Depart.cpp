@@ -10,17 +10,16 @@ Depart::Depart(Banque *sed, double heure, Caissier &caissier, Client &client) : 
 }
 
 void Depart::traiter() {
-    delete _client;
     Banque* banque = (Banque*) _sed;
-    banque->fileAttente()->afficherListeClients();
+    cout << "test1" << endl;
+    cout << _client->heureArrivee() << endl;
+    cout << "test2" << endl;
     if (banque->fileAttente()->estVide()) {
-        cout << "FileAttente vide - Attendre" << endl;
+        cout << "File Attente vide - Caissier Attendre" << endl;
         _caissier->attendre();
     } else {
-        cout << "FileAttente non vide - Prendre client" << endl;
-        banque->fileAttente()->afficherListeClients();
+        cout << "File Attente non vide - Servir Client" << endl;
         Client &c = banque->fileAttente()->retirer();
-        banque->fileAttente()->afficherListeClients();
         _caissier->servir(c);
     }
 }

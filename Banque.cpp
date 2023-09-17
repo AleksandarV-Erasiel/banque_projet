@@ -74,15 +74,9 @@ int Banque::nbClients() {
 
 Caissier *Banque::unCaissierLibre() {
     Caissier *caissierLibre = NULL;
-    // int i = 0;
-    // while (!caissierLibre) {
-    //     if (_caissiers[i]->estLibre())
-    //         caissierLibre = _caissiers[i];
-    //     i++;
-    // }
     int i = 0;
     for (i = 0; i < _nbCaissiers; i++) {
-        cout << "Temps de traitement restant pour C" << i << ": " << _caissiers[i]->dureeOccupee() - _heure << endl;
+        cout << "Temps de traitement restant pour C" << i << ": " << _caissiers[i]->dureeOccupee() - _heure << " (" << _caissiers[i]->dureeOccupee() <<")" << endl;
         if (_heure >= _caissiers[i]->dureeOccupee() && _caissiers[i]->estLibre()) {
             caissierLibre = _caissiers[i];
             break;

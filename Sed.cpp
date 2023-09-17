@@ -20,7 +20,6 @@ void Sed::ajouter(Evenement &e) {
 
 void Sed::lancer() {
     while (!_evenements.empty()) {
-        // TODO: remove all of these Banque, FA,... used for debug
         cout << "Echeancier:" << endl;
         for (const Evenement* evenement : _evenements) {
             cout << evenement->heure();
@@ -40,7 +39,6 @@ void Sed::lancer() {
         double t1 = e1->heure();
         _heure = t1;
         e1->traiter();
-        // TODO: maybe seg fault from here ? :thinking:
         _evenements.erase(_evenements.begin());
         delete e1;
 
@@ -49,5 +47,5 @@ void Sed::lancer() {
 }
 
 double Sed::heure() {
-    return _heure;
+    return (*_evenements.begin())->heure();
 }

@@ -5,10 +5,6 @@
 #include <vector>
 using namespace std;
 
-// bool compareEvenements(Evenement* lhs, Evenement* rhs) {
-//     return lhs->heure() < rhs->heure();
-// }
-
 class Sed
 {
 protected:

@@ -12,8 +12,8 @@ Arrivee::Arrivee(Banque *sed, double heure): Evenement(sed, heure) {
 
 void Arrivee::traiter() {
     Banque* banque = (Banque*) _sed;
-    Client *c = new Client(_heure);
     Caissier *cs = banque->unCaissierLibre();
+    Client *c = new Client(_heure);
 
     cout << "banque->heure() " << banque->heure() << endl;
 
@@ -22,11 +22,9 @@ void Arrivee::traiter() {
         cout << "Client servi immediatement servi" << endl;
     } else {
         cout << "banque->heure() " << banque->heure() << endl;
-        banque->fileAttente()->afficherListeClients();
         banque->fileAttente()->ajouter(*c);
         cout << "banque->heure() " << banque->heure() << endl;
         cout << "Client ajoute a la file d'attente" << endl;
-        banque->fileAttente()->afficherListeClients();
     }
 
     cout << "banque->heure() " << banque->heure() << endl;
@@ -49,5 +47,4 @@ void Arrivee::traiter() {
         Arrivee *a = new Arrivee(banque, banque->heure() + hpa);
         banque->ajouter(*a);
     }
-    banque->fileAttente()->afficherListeClients();
 }

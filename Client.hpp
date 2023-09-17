@@ -1,7 +1,6 @@
 #ifndef __CLIENT_H
 #define __CLIENT_H
-// #include <iostream>
-// using namespace std;
+
 class Client
 {
 protected:
