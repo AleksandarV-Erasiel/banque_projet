@@ -4,4 +4,4 @@ Client::Client(double heureArrivee) {
     _heureArrivee = heureArrivee;
 }
 
-double Client::heureArrivee() { return _heureArrivee; }
+double Client::heureArrivee() const { return _heureArrivee; }

@@ -22,5 +22,7 @@ public:
     void ajouter(Client& client);
     bool estVide();
     Client& retirer();
+    queue<Client> clientsQueue();
+    void afficherListeClients();
 };
 #endif

@@ -9,6 +9,7 @@ Caissier::Caissier(Banque *banque, double tempsMoyenService) {
     _tempsMoyenService = tempsMoyenService;
     _tempsServiceTotal = 0;
     _nbClients = 0;
+    _dureeOccupee = 0;
     _estLibre = true;
 }
 
@@ -21,10 +22,11 @@ int Caissier::nbClients() {
 }
 
 double Caissier::tauxOccupation() {
-    return _tempsMoyenService / _banque->dureeReelle();
+    return _tempsServiceTotal / _banque->dureeReelle();
 }
 
 bool Caissier::estLibre() {
+
     return _estLibre;
 }
 
@@ -39,6 +41,7 @@ void Caissier::servir(Client &client) {
     _nbClients++;
     _estLibre = false;
     _tempsServiceTotal += tempsService;
+    _dureeOccupee = _banque->heure() + tempsService;
 
     Depart *depart = new Depart(_banque, _banque->heure() + tempsService, *this, client);
     _banque->ajouter(*depart);
@@ -46,4 +49,8 @@ void Caissier::servir(Client &client) {
 
 void Caissier::attendre() {
     _estLibre = true;
+}
+
+double Caissier::dureeOccupee() {
+    return _dureeOccupee;
 }

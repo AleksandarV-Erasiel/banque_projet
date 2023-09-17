@@ -23,5 +23,6 @@ public:
     Caissier *unCaissierLibre();
     FileAttente *fileAttente();
     double** tauxOccupationParCaissier();
+    double dureeReelleCalculation();
 };
 #endif

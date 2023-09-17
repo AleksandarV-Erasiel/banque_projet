@@ -2,13 +2,14 @@
 #define __SED_H
 #include "Evenement.hpp"
 #include <set>
+#include <vector>
 using namespace std;
 
 class Sed
 {
 protected:
     double _heure;
-    set<Evenement*> _evenements;
+    vector<Evenement*> _evenements;
 public:
     Sed(double t0);
     void ajouter(Evenement& e);

@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 using namespace std;
 #include "Banque.hpp"
@@ -28,10 +29,16 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
         Caissier *c = new Caissier(this, caissiers[i]);
         caissiersList[i] = c;
     }
+    
     _caissiers = caissiersList;
 
     Arrivee* arrivee = new Arrivee(this, 4.0);
     ajouter(*arrivee);
+
+    for (const Evenement* evenement : _evenements) {
+        cout << evenement->heure() << " ";
+    }
+    cout << endl;
 }
 
 Banque::~Banque() {
@@ -68,11 +75,16 @@ int Banque::nbClients() {
 Caissier *Banque::unCaissierLibre() {
     Caissier *caissierLibre = NULL;
     int i = 0;
-    while (!caissierLibre) {
-        if (_caissiers[i]->estLibre())
+    for (i = 0; i < _nbCaissiers; i++) {
+        cout << "Temps de traitement restant pour C" << i << ": " << _caissiers[i]->dureeOccupee() - _heure << " (" << _caissiers[i]->dureeOccupee() <<")" << endl;
+        if (_heure >= _caissiers[i]->dureeOccupee() && _caissiers[i]->estLibre()) {
             caissierLibre = _caissiers[i];
-        i++;
+            break;
+        }
     }
+    if (caissierLibre) cout << "Caissier libre trouve: C" << i << endl << endl;
+    else cout << "Pas de caissier libre" << endl << endl;
+
     return caissierLibre;
 }
 
@@ -85,6 +97,15 @@ double** Banque::tauxOccupationParCaissier() {
         *(tauxOccupation[i]) = _caissiers[i]->tauxOccupation();
     }
     return tauxOccupation;
+}
+
+double Banque::dureeReelleCalculation() {
+    for (int i = 0; i < _nbCaissiers; ++i) {
+        if (_caissiers[i]->dureeOccupee() > _dureeReelle) {
+            _dureeReelle = _caissiers[i]->dureeOccupee();
+        }
+    }
+    return _dureeReelle;
 }
 
 
