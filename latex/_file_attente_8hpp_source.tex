@@ -1,0 +1,43 @@
+\doxysection{File\+Attente.\+hpp}
+\hypertarget{_file_attente_8hpp_source}{}\label{_file_attente_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_FILEATTENTE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_FILEATTENTE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Client.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Banque.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_banque}{Banque}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_file_attente}{FileAttente}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_banque}{Banque}}\ *\mbox{\hyperlink{class_file_attente_a508eec338bb41aff1a5f44e8ed679c25}{\_banque}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ queue<Client>\ \mbox{\hyperlink{class_file_attente_a29f528653e0c2389cc1f9a870e6c30fd}{\_clients}};\ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_file_attente_a502ddaf904afc268aab0445f811a19c2}{\_longueurMax}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_file_attente_a10e9c4490f8ef64efec3d2afae02b7eb}{\_longueurMoyenne}};\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_file_attente_a115d8c462bab1cf94515228fdada67a6}{\_tempsMoyenAttente}};\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_file_attente}{FileAttente}}(\mbox{\hyperlink{class_banque}{Banque}}\ *banque);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_file_attente_aa000175387b7d09cab4b89e73650e144}{longueurMax}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_file_attente_ae0a07000b42a88cea0cc105e2989b8bf}{longueurMoyenne}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_file_attente_a0a4657ce189c9d900a7e8aa8ff2996ec}{tempsMoyenAttente}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_file_attente_a3558bbc2481f0151294975aee620ebcb}{ajouter}}(\mbox{\hyperlink{class_client}{Client}}\&\ client);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_file_attente_a070bc0df567e2e1019d0946618eb6a6c}{estVide}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_client}{Client}}\&\ \mbox{\hyperlink{class_file_attente_a6a8644e8cd0baba02df5a20738cb2338}{retirer}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ queue<Client>\ \mbox{\hyperlink{class_file_attente_afa7c90453845a4c061ce49bbf73d565e}{clientsQueue}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_file_attente_a6c4a3ab7add59964de04f07313da8928}{afficherListeClients}}();}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

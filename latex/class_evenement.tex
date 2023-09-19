@@ -1,0 +1,110 @@
+\doxysection{Evenement Class Reference}
+\hypertarget{class_evenement}{}\label{class_evenement}\index{Evenement@{Evenement}}
+
+
+La classe \doxylink{class_evenement}{Evenement} est une classe de base pour représenter des événements dans la simulation.  
+
+
+
+
+{\ttfamily \#include $<$Evenement.\+hpp$>$}
+
+Inheritance diagram for Evenement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_evenement}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_evenement_ab3e051eb7338b3deb3583e893f837992}{Evenement}} (\mbox{\hyperlink{class_sed}{Sed}} \texorpdfstring{$\ast$}{*}sed, double \mbox{\hyperlink{class_evenement_a5afdc67c7fc8b907d50934ff49722eb3}{heure}})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_evenement}{Evenement}. \end{DoxyCompactList}\item 
+\Hypertarget{class_evenement_a15de89652d5416b1c63488bc97d8cd58}\label{class_evenement_a15de89652d5416b1c63488bc97d8cd58} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Evenement} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel de la classe \doxylink{class_evenement}{Evenement}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_evenement_acdd3bcdfd567c85a61416a4e5c3f11de}{traiter}} ()
+\begin{DoxyCompactList}\small\item\em Traite l\textquotesingle{}événement (cette fonction doit être redéfinie dans les classes dérivées). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_evenement_a5afdc67c7fc8b907d50934ff49722eb3}{heure}} () const
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}heure à laquelle l\textquotesingle{}événement doit se produire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sed}{Sed}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_evenement_a1200be3112466f558ff0a9a22fc15bb0}{\+\_\+sed}}
+\item 
+double \mbox{\hyperlink{class_evenement_a231b1aeb5c1af6a3d71aff3e3145052a}{\+\_\+heure}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe \doxylink{class_evenement}{Evenement} est une classe de base pour représenter des événements dans la simulation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_evenement_ab3e051eb7338b3deb3583e893f837992}\label{class_evenement_ab3e051eb7338b3deb3583e893f837992} 
+\index{Evenement@{Evenement}!Evenement@{Evenement}}
+\index{Evenement@{Evenement}!Evenement@{Evenement}}
+\doxysubsubsection{\texorpdfstring{Evenement()}{Evenement()}}
+{\footnotesize\ttfamily Evenement\+::\+Evenement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sed}{Sed}} \texorpdfstring{$\ast$}{*}}]{sed,  }\item[{double}]{heure }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{class_evenement}{Evenement}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sed} & Un pointeur vers la simulation associée à l\textquotesingle{}événement. \\
+\hline
+{\em heure} & L\textquotesingle{}heure à laquelle l\textquotesingle{}événement doit se produire. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_evenement_a5afdc67c7fc8b907d50934ff49722eb3}\label{class_evenement_a5afdc67c7fc8b907d50934ff49722eb3} 
+\index{Evenement@{Evenement}!heure@{heure}}
+\index{heure@{heure}!Evenement@{Evenement}}
+\doxysubsubsection{\texorpdfstring{heure()}{heure()}}
+{\footnotesize\ttfamily double Evenement\+::heure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient l\textquotesingle{}heure à laquelle l\textquotesingle{}événement doit se produire. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}heure de l\textquotesingle{}événement. 
+\end{DoxyReturn}
+\Hypertarget{class_evenement_acdd3bcdfd567c85a61416a4e5c3f11de}\label{class_evenement_acdd3bcdfd567c85a61416a4e5c3f11de} 
+\index{Evenement@{Evenement}!traiter@{traiter}}
+\index{traiter@{traiter}!Evenement@{Evenement}}
+\doxysubsubsection{\texorpdfstring{traiter()}{traiter()}}
+{\footnotesize\ttfamily void Evenement\+::traiter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Traite l\textquotesingle{}événement (cette fonction doit être redéfinie dans les classes dérivées). 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_arrivee_a736bc94f357d2e45b30b9bac19e6d983}{Arrivee}}, and \mbox{\hyperlink{class_depart_a2f791f13cc90635dffa097bfe00cd830}{Depart}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_evenement_a231b1aeb5c1af6a3d71aff3e3145052a}\label{class_evenement_a231b1aeb5c1af6a3d71aff3e3145052a} 
+\index{Evenement@{Evenement}!\_heure@{\_heure}}
+\index{\_heure@{\_heure}!Evenement@{Evenement}}
+\doxysubsubsection{\texorpdfstring{\_heure}{\_heure}}
+{\footnotesize\ttfamily double Evenement\+::\+\_\+heure\hspace{0.3cm}{\ttfamily [protected]}}
+
+L\textquotesingle{}heure à laquelle l\textquotesingle{}événement doit se produire. \Hypertarget{class_evenement_a1200be3112466f558ff0a9a22fc15bb0}\label{class_evenement_a1200be3112466f558ff0a9a22fc15bb0} 
+\index{Evenement@{Evenement}!\_sed@{\_sed}}
+\index{\_sed@{\_sed}!Evenement@{Evenement}}
+\doxysubsubsection{\texorpdfstring{\_sed}{\_sed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sed}{Sed}}\texorpdfstring{$\ast$}{*} Evenement\+::\+\_\+sed\hspace{0.3cm}{\ttfamily [protected]}}
+
+Un pointeur vers la simulation (\doxylink{class_sed}{Sed}) associée à l\textquotesingle{}événement. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Evenement.\+hpp\item 
+Evenement.\+cpp\end{DoxyCompactItemize}

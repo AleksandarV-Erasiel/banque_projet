@@ -1,0 +1,43 @@
+\doxysection{Banque.\+hpp}
+\hypertarget{_banque_8hpp_source}{}\label{_banque_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_BANQUE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_BANQUE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Caissier.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Sed.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}FileAttente.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_file_attente}{FileAttente}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_banque}{Banque}}:\textcolor{keyword}{public}\ \mbox{\hyperlink{class_sed}{Sed}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_file_attente}{FileAttente}}\ *\_fileAttente;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ \_dureePrevue,\ \_dureeReelle,\ \_tempsEntreArrivees;}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_caissier}{Caissier}}\ **\_caissiers;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \_nbCaissiers;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_banque}{Banque}}(\textcolor{keywordtype}{double}\ t0,\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_banque_ae46944ae8820d68cf66682887994ad28}{dureePrevue}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_banque_aa4464368554170a10291693d62e63420}{nbCaissiers}},\ \textcolor{keywordtype}{double}\ *caissiers,\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_banque_a7aab95b03463e4e592cbfc914d286d7d}{tempsEntreArrivees}});}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_banque_a14aaf09b3db8037f8d0007958fa7def2}{\string~Banque}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_banque_ae46944ae8820d68cf66682887994ad28}{dureePrevue}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_banque_aa4464368554170a10291693d62e63420}{nbCaissiers}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_banque_a7aab95b03463e4e592cbfc914d286d7d}{tempsEntreArrivees}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_banque_afa3570b2325be3e01d48d8baba190b2d}{dureeReelle}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_banque_ac7bc9b97cb23aaa518dd9656e570a91a}{nbClients}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_caissier}{Caissier}}\ *\mbox{\hyperlink{class_banque_a804f56d9fe5712f43667e883dc2208d7}{unCaissierLibre}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{double}\ **\mbox{\hyperlink{class_banque_a44ea83fd297e48bab5fc1efbad4b8f68}{tauxOccupationParCaissier}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_banque_a6a3a76ef292e357b279623aa276df868}{dureeReelleCalculation}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{class_file_attente}{FileAttente}}\ *\mbox{\hyperlink{class_banque_ae481ffaa5d514b080a22d67f27ecb0df}{fileAttente}}();}
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

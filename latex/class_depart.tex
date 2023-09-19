@@ -1,0 +1,112 @@
+\doxysection{Depart Class Reference}
+\hypertarget{class_depart}{}\label{class_depart}\index{Depart@{Depart}}
+
+
+La classe \doxylink{class_depart}{Depart} représente un événement de départ d\textquotesingle{}un client d\textquotesingle{}une caisse.  
+
+
+
+
+{\ttfamily \#include $<$Depart.\+hpp$>$}
+
+Inheritance diagram for Depart\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_depart}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_depart_a4ca6aa271c16c3b515cb7cddcdc24aa0}{Depart}} (\mbox{\hyperlink{class_banque}{Banque}} \texorpdfstring{$\ast$}{*}sed, double \mbox{\hyperlink{class_evenement_a5afdc67c7fc8b907d50934ff49722eb3}{heure}}, \mbox{\hyperlink{class_caissier}{Caissier}} \&caissier, \mbox{\hyperlink{class_client}{Client}} \&client)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_depart}{Depart}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_depart_a2f791f13cc90635dffa097bfe00cd830}{traiter}} ()
+\begin{DoxyCompactList}\small\item\em Traite l\textquotesingle{}événement de départ. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_evenement}{Evenement}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_evenement_ab3e051eb7338b3deb3583e893f837992}{Evenement}} (\mbox{\hyperlink{class_sed}{Sed}} \texorpdfstring{$\ast$}{*}sed, double \mbox{\hyperlink{class_evenement_a5afdc67c7fc8b907d50934ff49722eb3}{heure}})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_evenement}{Evenement}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Evenement} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel de la classe \doxylink{class_evenement}{Evenement}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_evenement_a5afdc67c7fc8b907d50934ff49722eb3}{heure}} () const
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}heure à laquelle l\textquotesingle{}événement doit se produire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_caissier}{Caissier}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_depart_ad79168eed0fc6f14d95c0b534895ed06}{\+\_\+caissier}}
+\item 
+\mbox{\hyperlink{class_client}{Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_depart_ada37015af9bc450d0b79703ae1677030}{\+\_\+client}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_evenement}{Evenement}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sed}{Sed}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_evenement_a1200be3112466f558ff0a9a22fc15bb0}{\+\_\+sed}}
+\item 
+double \mbox{\hyperlink{class_evenement_a231b1aeb5c1af6a3d71aff3e3145052a}{\+\_\+heure}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe \doxylink{class_depart}{Depart} représente un événement de départ d\textquotesingle{}un client d\textquotesingle{}une caisse. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_depart_a4ca6aa271c16c3b515cb7cddcdc24aa0}\label{class_depart_a4ca6aa271c16c3b515cb7cddcdc24aa0} 
+\index{Depart@{Depart}!Depart@{Depart}}
+\index{Depart@{Depart}!Depart@{Depart}}
+\doxysubsubsection{\texorpdfstring{Depart()}{Depart()}}
+{\footnotesize\ttfamily Depart\+::\+Depart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_banque}{Banque}} \texorpdfstring{$\ast$}{*}}]{sed,  }\item[{double}]{heure,  }\item[{\mbox{\hyperlink{class_caissier}{Caissier}} \&}]{caissier,  }\item[{\mbox{\hyperlink{class_client}{Client}} \&}]{client }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{class_depart}{Depart}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sed} & Un pointeur vers la banque associée à l\textquotesingle{}événement. \\
+\hline
+{\em heure} & L\textquotesingle{}heure à laquelle l\textquotesingle{}événement de départ se produit. \\
+\hline
+{\em caissier} & Le caissier qui a servi le client.. \\
+\hline
+{\em client} & Le client qui s\textquotesingle{}est fait servir. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_depart_a2f791f13cc90635dffa097bfe00cd830}\label{class_depart_a2f791f13cc90635dffa097bfe00cd830} 
+\index{Depart@{Depart}!traiter@{traiter}}
+\index{traiter@{traiter}!Depart@{Depart}}
+\doxysubsubsection{\texorpdfstring{traiter()}{traiter()}}
+{\footnotesize\ttfamily void Depart\+::traiter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Traite l\textquotesingle{}événement de départ. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_evenement_acdd3bcdfd567c85a61416a4e5c3f11de}{Evenement}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_depart_ad79168eed0fc6f14d95c0b534895ed06}\label{class_depart_ad79168eed0fc6f14d95c0b534895ed06} 
+\index{Depart@{Depart}!\_caissier@{\_caissier}}
+\index{\_caissier@{\_caissier}!Depart@{Depart}}
+\doxysubsubsection{\texorpdfstring{\_caissier}{\_caissier}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_caissier}{Caissier}}\texorpdfstring{$\ast$}{*} Depart\+::\+\_\+caissier\hspace{0.3cm}{\ttfamily [protected]}}
+
+Le caissier qui a servi le client. \Hypertarget{class_depart_ada37015af9bc450d0b79703ae1677030}\label{class_depart_ada37015af9bc450d0b79703ae1677030} 
+\index{Depart@{Depart}!\_client@{\_client}}
+\index{\_client@{\_client}!Depart@{Depart}}
+\doxysubsubsection{\texorpdfstring{\_client}{\_client}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_client}{Client}}\texorpdfstring{$\ast$}{*} Depart\+::\+\_\+client\hspace{0.3cm}{\ttfamily [protected]}}
+
+Le client qui s\textquotesingle{}est fait servir. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Depart.\+hpp\item 
+Depart.\+cpp\end{DoxyCompactItemize}

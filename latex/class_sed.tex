@@ -1,0 +1,96 @@
+\doxysection{Sed Class Reference}
+\hypertarget{class_sed}{}\label{class_sed}\index{Sed@{Sed}}
+
+
+La classe \doxylink{class_sed}{Sed} permet la simulation par événement discrets.  
+
+
+
+
+{\ttfamily \#include $<$Sed.\+hpp$>$}
+
+Inheritance diagram for Sed\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sed}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sed_ad95e7aeb31f0a6597102a2a6900a2e5d}{Sed}} (double t0)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_sed}{Sed}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sed_aca6c3a027398f01acc8e5b846dda7aeb}{ajouter}} (\mbox{\hyperlink{class_evenement}{Evenement}} \&e)
+\begin{DoxyCompactList}\small\item\em Ajoute un événement à l\textquotesingle{}échéancier. \end{DoxyCompactList}\item 
+\Hypertarget{class_sed_a10009c6c5b038798fff1ed43691eec87}\label{class_sed_a10009c6c5b038798fff1ed43691eec87} 
+void {\bfseries lancer} ()
+\begin{DoxyCompactList}\small\item\em Lance la simulation en traitant les événements dans l\textquotesingle{}échéancier. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_sed_a045be7b0a8f72a58517dd6d098418d60}{heure}} ()
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}heure courante de la simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sed_a09ee6dd066817c1acaf377bc8b825d0d}\label{class_sed_a09ee6dd066817c1acaf377bc8b825d0d} 
+double {\bfseries \+\_\+heure}
+\item 
+\Hypertarget{class_sed_a935b20b4d52b5a95a0ab25f453402404}\label{class_sed_a935b20b4d52b5a95a0ab25f453402404} 
+vector$<$ \mbox{\hyperlink{class_evenement}{Evenement}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries \+\_\+evenements}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe \doxylink{class_sed}{Sed} permet la simulation par événement discrets. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sed_ad95e7aeb31f0a6597102a2a6900a2e5d}\label{class_sed_ad95e7aeb31f0a6597102a2a6900a2e5d} 
+\index{Sed@{Sed}!Sed@{Sed}}
+\index{Sed@{Sed}!Sed@{Sed}}
+\doxysubsubsection{\texorpdfstring{Sed()}{Sed()}}
+{\footnotesize\ttfamily Sed\+::\+Sed (\begin{DoxyParamCaption}\item[{double}]{t0 }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{class_sed}{Sed}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t0} & Le temps initial de la simulation. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sed_aca6c3a027398f01acc8e5b846dda7aeb}\label{class_sed_aca6c3a027398f01acc8e5b846dda7aeb} 
+\index{Sed@{Sed}!ajouter@{ajouter}}
+\index{ajouter@{ajouter}!Sed@{Sed}}
+\doxysubsubsection{\texorpdfstring{ajouter()}{ajouter()}}
+{\footnotesize\ttfamily void Sed\+::ajouter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_evenement}{Evenement}} \&}]{e }\end{DoxyParamCaption})}
+
+
+
+Ajoute un événement à l\textquotesingle{}échéancier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & L\textquotesingle{}événement à ajouter. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sed_a045be7b0a8f72a58517dd6d098418d60}\label{class_sed_a045be7b0a8f72a58517dd6d098418d60} 
+\index{Sed@{Sed}!heure@{heure}}
+\index{heure@{heure}!Sed@{Sed}}
+\doxysubsubsection{\texorpdfstring{heure()}{heure()}}
+{\footnotesize\ttfamily double Sed\+::heure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtient l\textquotesingle{}heure courante de la simulation. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}heure courante de la simulation. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sed.\+hpp\item 
+Sed.\+cpp\end{DoxyCompactItemize}

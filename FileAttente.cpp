@@ -21,11 +21,6 @@ double FileAttente::tempsMoyenAttente() {
     return _tempsMoyenAttente;
 }
 
-/**
- * @brief 
- * 
- * @param client 
- */
 void FileAttente::ajouter(Client &client) {
     _clients.push(client);
     if (_longueurMax < _clients.size()) _longueurMax = (int) _clients.size();

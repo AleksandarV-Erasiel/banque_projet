@@ -1,0 +1,40 @@
+\doxysection{Caissier.\+hpp}
+\hypertarget{_caissier_8hpp_source}{}\label{_caissier_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_\_CAISSIER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_\_CAISSIER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Client.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_banque}{Banque}};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_caissier}{Caissier}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_banque}{Banque}}\ *\_banque;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{double}\ \_tempsMoyenService;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \_nbClients;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ \_tempsServiceTotal;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_estLibre;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \_dureeOccupee;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_caissier}{Caissier}}(\mbox{\hyperlink{class_banque}{Banque}}\ *banque,\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_caissier_a292c60d579915a30b0b9eb55d3df7897}{tempsMoyenService}});}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_caissier_a292c60d579915a30b0b9eb55d3df7897}{tempsMoyenService}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_caissier_ab04fe3a4443a8e0fba7c211c032ceed0}{nbClients}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_caissier_a09de2396245d510aa60772712fcba717}{tauxOccupation}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_caissier_a730454d6b00951b15fb65dff2eeb7565}{estLibre}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_caissier_a7df9c97f0bf029092eb8e04f685da86c}{servir}}(\mbox{\hyperlink{class_client}{Client}}\ \&client);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_caissier_a26abafd5af9831f0dbf18acfde60b4b7}{attendre}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_caissier_aefacb2f0861fca8b1148f71866e0a775}{dureeOccupee}}();}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
