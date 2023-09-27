@@ -15,5 +15,8 @@ $(EXEC): $(OBJS)
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+doc:
+	doxygen Doxyfile
+
 clean:
 	rm -f $(OBJS) $(EXEC)

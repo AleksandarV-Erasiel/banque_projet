@@ -14,7 +14,7 @@ int FileAttente::longueurMax() {
 }
 
 double FileAttente::longueurMoyenne() {
-    return _longueurMoyenne;
+    return _longueurMoyenne / _banque->nbClients();
 }
 
 double FileAttente::tempsMoyenAttente() {
@@ -24,8 +24,6 @@ double FileAttente::tempsMoyenAttente() {
 void FileAttente::ajouter(Client &client) {
     _clients.push(client);
     if (_longueurMax < _clients.size()) _longueurMax = (int) _clients.size();
-    // _longueurMoyenne += (int) _clients.size();
-    // _longueurMoyenne /= 2;
 }
 
 bool FileAttente::estVide() {
@@ -38,7 +36,6 @@ Client &FileAttente::retirer() {
     _tempsMoyenAttente /= 2;
     _clients.pop();
     _longueurMoyenne += (int) _clients.size();
-    _longueurMoyenne /= 2;
     return c;
 }
 
