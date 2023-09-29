@@ -19,23 +19,26 @@ int main(int argc, char* argv[]) {
         int nbCaissiers;
         double *caissiers = new double[nbCaissiers];
 
-
         configFile >> t0;
         if (configFile.tellg() < 0) {
+            cout << "ERREUR: Le fichier de configuration n'est pas valide." << endl;
             exit(-1);
         }
         configFile >> dureePrevue;
         if (configFile.tellg() < 0) {
+            cout << "ERREUR: Le fichier de configuration n'est pas valide." << endl;
             exit(-1);
         }
         configFile >> tempsEntreArrivees;
         if (configFile.tellg() < 0) {
+            cout << "ERREUR: Le fichier de configuration n'est pas valide." << endl;
             exit(-1);
         }
         configFile >> nbCaissiers;
         double dureeTraitementCaissier;
         for (int i = 0; i < nbCaissiers; i++) {
             if (configFile.tellg() < 0) {
+                cout << "ERREUR: Le fichier de configuration n'est pas valide." << endl;
                 exit(-1);
             }
             configFile >> dureeTraitementCaissier;
