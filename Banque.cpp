@@ -7,7 +7,7 @@ using namespace std;
 #include "Arrivee.hpp"
 
 Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers, double tempsEntreArrivees): Sed(t0) {
-    cout << "PARAMETRES D'ENTREES " << endl;
+    cout << "PARAMETRES D'ENTREES" << endl;
     cout << "Duree prevue: " << dureePrevue << endl;
     cout << "Nombre de Caissiers: " << nbCaissiers << endl;
     cout << "Duree de traitement des Caissiers: [ ";
@@ -16,6 +16,7 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
     }
     cout << "]" << endl;
     cout << "Temps entre arrivees: " << tempsEntreArrivees << endl;
+    cout << "==================================================================================================================" << endl;
 
     _dureePrevue = dureePrevue;
     _dureeReelle = dureePrevue;
