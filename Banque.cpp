@@ -34,11 +34,6 @@ Banque::Banque(double t0, double dureePrevue, int nbCaissiers, double *caissiers
 
     Arrivee* arrivee = new Arrivee(this, 0.0);
     ajouter(*arrivee);
-
-    for (const Evenement* evenement : _evenements) {
-        cout << evenement->heure() << " ";
-    }
-    cout << endl;
 }
 
 Banque::~Banque() {
@@ -76,14 +71,11 @@ Caissier *Banque::unCaissierLibre() {
     Caissier *caissierLibre = NULL;
     int i = 0;
     for (i = 0; i < _nbCaissiers; i++) {
-        cout << "Temps de traitement restant pour C" << i << ": " << _caissiers[i]->dureeOccupee() - _heure << " (" << _caissiers[i]->dureeOccupee() <<")" << endl;
         if (_heure >= _caissiers[i]->dureeOccupee() && _caissiers[i]->estLibre()) {
             caissierLibre = _caissiers[i];
             break;
         }
     }
-    if (caissierLibre) cout << "Caissier libre trouve: C" << i << endl << endl;
-    else cout << "Pas de caissier libre" << endl << endl;
 
     return caissierLibre;
 }

@@ -20,6 +20,18 @@ void Sed::ajouter(Evenement &e) {
 
 void Sed::lancer() {
     while (!_evenements.empty()) {
+
+        const Evenement* evenement = _evenements.front();
+
+        const Arrivee* arrivee = dynamic_cast<const Arrivee*>(evenement);
+        const Depart* depart = dynamic_cast<const Depart*>(evenement);
+
+        if (arrivee) {
+            cout << "Evenement en cours: ARRIVEE (" << evenement->heure() << ")" << endl;
+        } else if (depart) {
+            cout << "Evenement en cours: DEPART (" << evenement->heure() << ")" << endl;
+        }
+
         cout << "Echeancier:" << endl;
         for (const Evenement* evenement : _evenements) {
             cout << evenement->heure();
@@ -33,7 +45,7 @@ void Sed::lancer() {
                 cout << "(D) ";
             }
         }
-        cout << endl << endl;
+        cout << endl;
 
         Evenement* e1 = *_evenements.begin();
         double t1 = e1->heure();

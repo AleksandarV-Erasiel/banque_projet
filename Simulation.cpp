@@ -44,7 +44,6 @@ int main(int argc, char* argv[]) {
 
         configFile.close();
 
-        cout << "Simulation lancee" << endl;
         Banque *banque = new Banque(0, 100.0, nbCaissiers, caissiers, 1);
         banque->lancer();
         cout << "Duree reelle: " << banque->dureeReelleCalculation() << endl;

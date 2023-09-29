@@ -15,21 +15,11 @@ void Arrivee::traiter() {
     Caissier *cs = banque->unCaissierLibre();
     Client *c = new Client(_heure);
 
-    cout << "banque->heure() " << banque->heure() << endl;
-
     if (cs != NULL && banque->fileAttente()->estVide() && banque->heure() >= cs->dureeOccupee()) {
         cs->servir(*c);
-        cout << "Client servi immediatement servi" << endl;
     } else {
-        cout << "banque->heure() " << banque->heure() << endl;
         banque->fileAttente()->ajouter(*c);
-        cout << "banque->heure() " << banque->heure() << endl;
-        cout << "Client ajoute a la file d'attente" << endl;
     }
-
-    cout << "banque->heure() " << banque->heure() << endl;
-
-    cout << "banque->fileAttente->estVide() "<< banque->fileAttente()->estVide() << endl;
 
     double ecartTypePercentage = 1;
     double ecartType = (banque->tempsEntreArrivees()/100) * ecartTypePercentage;
@@ -38,11 +28,6 @@ void Arrivee::traiter() {
     normal_distribution<double> distribution(banque->tempsEntreArrivees(), ecartType);
     double hpa = distribution(generator);
 
-    cout << "banque->heure() " << banque->heure() << endl;
-    cout << "hpa " << hpa << endl;
-    cout << "banque->dureePrevue() " << banque->dureePrevue() << endl;
-
-    cout << "banque->heure() + hpa <= banque->dureePrevue() " << banque->heure() + hpa << " <= " << banque->dureePrevue() << endl;
     if (banque->heure() + hpa <= banque->dureePrevue()) {
         Arrivee *a = new Arrivee(banque, banque->heure() + hpa);
         banque->ajouter(*a);
