@@ -20,3 +20,6 @@ doc:
 
 clean:
 	rm -f $(OBJS) $(EXEC)
+
+clean_doc:
+	rm -R html latex
